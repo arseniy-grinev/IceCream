@@ -1,2 +1,10 @@
 @import './common';
 @import './example';
+
+@import url("./utils/_style-rst.scss");
+@import url("./utils/_vars.scss");
+@import url("./utils/_mixins.scss");
+@import url("./utils/_visually-hidden.scss");
+@import url("./utils/_no-scroll.scss");
+
+@import url("./components/_body.scss");
