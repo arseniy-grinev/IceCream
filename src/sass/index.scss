@@ -1,6 +1,3 @@
-@import './common';
-@import './example';
-
 @import './utils/style-rst.scss';
 @import './utils/vars.scss';
 @import './utils/mixins.scss';
@@ -9,3 +6,14 @@
 
 @import './components/body.scss';
 @import './components/container.scss';
+
+@import './layouts/header.scss';
+@import './layouts/hero.scss';
+@import './layouts/mobile-menu.scss';
+@import './layouts/products.scss';
+@import './layouts/about.scss';
+@import './layouts/advantages.scss';
+@import './layouts/reviews.scss';
+@import './layouts/gallery.scss';
+@import './layouts/contacts.scss';
+@import './layouts/footer.scss';
