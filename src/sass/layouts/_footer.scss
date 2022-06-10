@@ -1,11 +1,16 @@
 .footer {
     background-color: $footer-bg;
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;    
    
 
-    @media screen and (min-width:768px) {
-        padding: 8px 0;
+    @media screen and (min-width:768px) {        
+        padding-bottom: 8px;
     }
+    @media screen and (min-width:1280px) {
+            padding-top: 60px;
+            
+        }
 }
 .footer__position {
     @media screen and (min-width:768px) {
