@@ -2,10 +2,12 @@
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  @include mobile {
-    max-width: 320px;
+  @include mobile-s {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  @include mobile {
+    max-width: 480px;
   }
   @include tablet {
     max-width: 768px;
@@ -17,25 +19,4 @@
     padding-left: 16px;
     padding-right: 16px;
   }
-}
-
-.contacts {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  &-list {
-    margin-left: -30px;
-  }
-  &-item {
-    margin-left: 30px;
-    padding: 40px;
-    &-text {
-      @include font(23px, 1.18, null, 0.2em);
-    }
-  }
-}
-
-// $btn-bg-color-dark: #d41443;
-
-.title {
-  color: $btn-bg-color-dark;
 }
