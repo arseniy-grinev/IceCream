@@ -1,0 +1,79 @@
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.advantage-list {
+  margin-top: -32px;
+  @include tablet {
+    display: flex;
+    margin-left: -20px;
+  }
+}
+
+.advantage-item {
+  display: block;
+  max-width: 230px;
+  margin-top: 98px;
+  @include tablet {
+    margin-left: 20px;
+    max-width: 165px;
+  }
+}
+.advantage-text {
+  @include font(12px, 1.7, 700, null);
+  @include tablet {
+    @include font(14px, 1.74, null, null);
+  }
+  @include tablet {
+    @include font(16px, 1.76, null, 0.02);
+  }
+  &-top {
+    @include font(36px, 1.14, 400, 0.04em);
+    font-family: $title-font-family;
+    color: $title-color;
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+    margin-top: 66px;
+    @include tablet {
+      font-size: 48px;
+    }
+    @include tablet {
+      font-size: 58px;
+    }
+  }
+}
+.advantage-1::before {
+  content: '';
+  position: absolute;
+  width: 33px;
+  height: 50px;
+  //   background-color: red;
+  left: 0;
+  bottom: 56px;
+  background-image: url(../images/advantages/advantage-1.svg);
+  //   fill: black;
+}
+.advantage-2::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  //   background-color: red;
+  left: 0;
+  bottom: 56px;
+  background-image: url(../images/advantages/advantage-2.svg);
+  //   fill: black;
+}
+.advantage-3::before {
+  content: '';
+  position: absolute;
+  width: 44px;
+  height: 50px;
+  //   background-color: red;
+  left: 0;
+  bottom: 56px;
+  background-image: url(../images/advantages/advantage-3.svg);
+  //   fill: black;
+}
