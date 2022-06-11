@@ -18,7 +18,8 @@
   align-items: center;
 
   @media screen and (max-width: 479px) {
-    max-width: 320px;
+    min-width: 320px;
+    max-width: 479px;
   }
 }
 
@@ -42,6 +43,7 @@
 
   min-width: 280px;
   min-height: 308px;
+
   padding-top: 43px;
   padding-right: 58px;
   padding-left: 65px;
@@ -49,8 +51,18 @@
 
   background-color: $customer-background-color;
 
+  @media screen and (min-width: 321px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: calc(308px - 13vw);
+  }
+  @include mobile {
+    min-height: 245.72px;
+  }
+
   @include tablet {
-    min-width: 620px;
+    width: 620px;
     min-height: 164px;
     padding-top: 37px;
     padding-right: 55.18px;
@@ -62,7 +74,7 @@
   }
 
   @include desktop {
-    min-width: 1034px;
+    width: 1034px;
     min-height: 138px;
     padding-top: 47px;
     padding-right: 142px;
@@ -122,15 +134,21 @@
 .customer-text {
   position: absolute;
 
-  width: 157px;
-  min-height: 265px;
-
   font-family: 'DM Sans';
   font-weight: 500;
   font-size: 12px;
   line-height: 2.58;
   text-align: center;
   color: $text-color-dark;
+
+  @media screen and (max-width: 320px) {
+    width: 157px;
+    min-height: 265px;
+  }
+
+  @media screen and (min-width: 321px) {
+    width: calc(100% - 123px);
+  }
 
   @include tablet {
     width: 514px;
@@ -165,6 +183,11 @@
       $customer-accent-color 31px,
       $customer-accent-color 31px
     );
+
+    @media screen and (min-width: 321px) {
+      width: calc(100% + 15px);
+      height: 100%;
+    }
 
     @include tablet {
       left: -44.71px;
