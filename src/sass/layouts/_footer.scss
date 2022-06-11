@@ -156,7 +156,7 @@
 .footer__tel {
     font-weight: 700;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     color: $footer-accent-color;
     text-decoration: none;
 
@@ -180,9 +180,9 @@
     content: '';
 
     width: 100%;
-    border: 1px solid #E1E1E1;
+    height: 1px;
     background-color: #E1E1E1;
-
+    
 }
 
 .footer__text { 
@@ -192,7 +192,7 @@
 
     font-weight: 700;
     font-size: 14px;
-    line-height: 152%;
+    line-height: 1.52;
     text-align: center;
     
     color: $footer-unicode-color;    
@@ -202,7 +202,7 @@
         max-width: none;
         padding-top: 8px;
 
-        line-height: 186%;         
+        line-height: 1.86;         
         letter-spacing: 0.02em;
     }
 
