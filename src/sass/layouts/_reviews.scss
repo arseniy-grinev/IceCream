@@ -1,0 +1,269 @@
+.customer-section {
+  padding-top: 80px;
+  padding-bottom: 48px;
+
+  @include tablet {
+    padding-bottom: 80px;
+  }
+
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.customer-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 479px) {
+    min-width: 320px;
+    max-width: 479px;
+  }
+}
+
+.customer-photo {
+  display: block;
+  width: 85px;
+  height: 85px;
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+
+.customer-thumb {
+  position: relative;
+
+  min-width: 280px;
+  min-height: 308px;
+
+  padding-top: 43px;
+  padding-right: 58px;
+  padding-left: 65px;
+  margin-bottom: 36px;
+
+  background-color: $customer-background-color;
+
+  @media screen and (min-width: 321px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: calc(308px - 13vw);
+  }
+
+  @include mobile {
+    min-height: 245.72px;
+  }
+
+  @include tablet {
+    width: 620px;
+    min-height: 164px;
+    padding-top: 37px;
+    padding-right: 55.18px;
+    padding-left: 50.71px;
+    padding-bottom: 44px;
+    margin-bottom: 24px;
+
+    background-color: rgba(250, 250, 250, 0.4);
+  }
+
+  @include desktop {
+    width: 1034px;
+    min-height: 138px;
+    padding-top: 47px;
+    padding-right: 142px;
+    padding-left: 142px;
+    padding-bottom: 39px;
+    margin-bottom: 36px;
+
+    background-color: $customer-background-color;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 0;
+    top: 30px;
+    left: 53px;
+    content: '';
+    width: 54px;
+    height: 40px;
+    background-image: url('/src/images/reviews/quotes.svg');
+    background-repeat: no-repeat;
+
+    @include tablet {
+      top: 20px;
+      left: 6px;
+      background-image: url('/src/images/reviews/quotes-tab.svg');
+      width: 60.35px;
+    }
+
+    @include desktop {
+      top: 32px;
+      left: 105px;
+      background-image: url('/src/images/reviews/quotes.svg');
+      width: 54px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    content: '';
+    width: 32px;
+    height: 4px;
+    background-image: url('/src/images/reviews/rev-3-dots.svg');
+
+    @include tablet {
+      bottom: -8px;
+    }
+
+    @include desktop {
+      bottom: -20px;
+    }
+  }
+}
+
+.customer-text {
+  position: absolute;
+
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.58;
+  text-align: center;
+  color: $text-color-dark;
+
+  @media screen and (max-width: 320px) {
+    width: 157px;
+    min-height: 265px;
+  }
+
+  @media screen and (min-width: 321px) {
+    width: calc(100% - 123px);
+  }
+
+  @include tablet {
+    width: 514px;
+    min-height: 83px;
+
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
+  }
+
+  @include desktop {
+    width: 750px;
+    min-height: 52px;
+
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    content: '';
+
+    width: 180px;
+    height: 265px;
+
+    background-image: repeating-linear-gradient(
+      transparent,
+      transparent 30px,
+      $customer-accent-color 31px,
+      $customer-accent-color 31px
+    );
+
+    @media screen and (min-width: 321px) {
+      width: calc(100% + 15px);
+      height: 100%;
+    }
+
+    @include tablet {
+      left: -44.71px;
+
+      width: 608px;
+      height: 90px;
+
+      background-image: repeating-linear-gradient(
+        transparent,
+        transparent 29px,
+        $customer-accent-color 30px,
+        $customer-accent-color 30px
+      );
+    }
+
+    @include desktop {
+      left: -36px;
+
+      width: 821px;
+      min-height: 31px;
+
+      background-image: repeating-linear-gradient(
+        transparent,
+        transparent 30px,
+        $customer-accent-color 31px,
+        $customer-accent-color 31px
+      );
+    }
+  }
+}
+
+.customer-name {
+  height: 25px;
+  margin-bottom: 16px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+  color: $text-color-dark;
+
+  @include tablet {
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+
+  @include desktop {
+    height: 31px;
+
+    font-size: 20px;
+  }
+}
+
+.customer-markers {
+  display: flex;
+  height: 12px;
+  margin-right: -18px;
+  list-style: none;
+}
+
+.marker-house-icon {
+  margin-right: 18px;
+}
+
+.marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 18px;
+  background-color: $customer-markers-color;
+}
+
+.house-icon {
+  display: block;
+  fill: $customer-icon-color;
+}
