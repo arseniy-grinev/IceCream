@@ -13,13 +13,28 @@
 }
 
 .customer-feedback {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: 479px) {
-    min-width: 320px;
-    max-width: 479px;
+  &::after {
+    position: absolute;
+    left: 50%;
+    bottom: 69px;
+    transform: translateX(-50%);
+    content: '';
+    width: 32px;
+    height: 4px;
+    background-image: url('/src/images/reviews/rev-3-dots.svg');
+
+    @include tablet {
+      bottom: -8px;
+    }
+
+    @include desktop {
+      bottom: -20px;
+    }
   }
 }
 
@@ -38,64 +53,83 @@
   }
 }
 
-.customer-thumb {
-  position: relative;
+// @media screen and (min-width: 321px) {
+//   display: flex;
+//   align-items: center;
+//   width: 100%;
+//   min-height: calc(308px - 13vw);
+// }
 
+// @include mobile {
+//   min-height: 245.72px;
+// }
+
+// @include tablet {
+//   width: 620px;
+//   min-height: 164px;
+//   padding-top: 37px;
+//   padding-right: 55.18px;
+//   padding-left: 50.71px;
+//   padding-bottom: 44px;
+//   margin-bottom: 24px;
+
+//   background-color: rgba(250, 250, 250, 0.4);
+// }
+
+// @include desktop {
+//   width: 1034px;
+//   min-height: 138px;
+//   padding-top: 47px;
+//   padding-right: 142px;
+//   padding-left: 142px;
+//   padding-bottom: 39px;
+//   margin-bottom: 36px;
+
+//   background-color: $customer-background-color;
+// }
+
+.customer-text {
   min-width: 280px;
-  min-height: 308px;
+  max-height: 308px;
 
   padding-top: 43px;
   padding-right: 58px;
   padding-left: 65px;
+  padding-bottom: 26px;
   margin-bottom: 36px;
 
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.58;
+  text-align: center;
+  color: $text-color-dark;
+
   background-color: $customer-background-color;
-
-  @media screen and (min-width: 321px) {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    min-height: calc(308px - 13vw);
-  }
-
-  @include mobile {
-    min-height: 245.72px;
-  }
+  background-image: url('/src/images/reviews/quotes.svg');
+  background-position: 100px;
+  background-repeat: no-repeat;
 
   @include tablet {
-    width: 620px;
-    min-height: 164px;
-    padding-top: 37px;
-    padding-right: 55.18px;
-    padding-left: 50.71px;
-    padding-bottom: 44px;
-    margin-bottom: 24px;
-
-    background-color: rgba(250, 250, 250, 0.4);
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
   }
 
   @include desktop {
-    width: 1034px;
-    min-height: 138px;
-    padding-top: 47px;
-    padding-right: 142px;
-    padding-left: 142px;
-    padding-bottom: 39px;
-    margin-bottom: 36px;
-
-    background-color: $customer-background-color;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
   }
 
   &::before {
     position: absolute;
     z-index: 0;
-    top: 30px;
-    left: 53px;
+    top: 130px;
+    left: 30px;
     content: '';
     width: 54px;
     height: 40px;
-    background-image: url('/src/images/reviews/quotes.svg');
-    background-repeat: no-repeat;
 
     @include tablet {
       top: 20px;
@@ -114,65 +148,9 @@
 
   &::after {
     position: absolute;
+    top: 162px;
     left: 50%;
-    bottom: -20px;
     transform: translateX(-50%);
-    content: '';
-    width: 32px;
-    height: 4px;
-    background-image: url('/src/images/reviews/rev-3-dots.svg');
-
-    @include tablet {
-      bottom: -8px;
-    }
-
-    @include desktop {
-      bottom: -20px;
-    }
-  }
-}
-
-.customer-text {
-  position: absolute;
-
-  font-family: 'DM Sans';
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 2.58;
-  text-align: center;
-  color: $text-color-dark;
-
-  @media screen and (max-width: 320px) {
-    width: 157px;
-    min-height: 265px;
-  }
-
-  @media screen and (min-width: 321px) {
-    width: calc(100% - 123px);
-  }
-
-  @include tablet {
-    width: 514px;
-    min-height: 83px;
-
-    font-size: 14px;
-    line-height: 2.16;
-    letter-spacing: 0.04em;
-  }
-
-  @include desktop {
-    width: 750px;
-    min-height: 52px;
-
-    font-size: 16px;
-    line-height: 1.86;
-    letter-spacing: 0.04em;
-  }
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: -15px;
     content: '';
 
     width: 180px;
@@ -185,9 +163,10 @@
       $customer-accent-color 31px
     );
 
-    @media screen and (min-width: 321px) {
-      width: calc(100% + 15px);
+    @include mobile-s {
+      width: calc(100% - 50px);
       height: 100%;
+      overflow: hidden;
     }
 
     @include tablet {
