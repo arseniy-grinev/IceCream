@@ -1,35 +1,30 @@
 .products__section {
   background-color: $products-background-color;
-}
-
-.product__paragraph {
-  @include font(18px, 21px, 400, null);
-  font-family: 'Titan One';
-  text-transform: uppercase;
-  color: $sub-title-color;
-  text-align: center;
-  margin: 0;
-}
-.products__container {
-  margin-left: auto;
-  margin-right: auto;
   padding-bottom: 40px;
   padding-top: 80px;
 }
 
+.product__paragraph {
+  @include font(18px, 21px, 400, null);
+  font-family: $title-font-family;
+  text-transform: uppercase;
+  color: $sub-title-color;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .product__title {
   @include font(34px, 39px, 400, 0.04em);
-  font-family: 'Titan One';
+  font-family: $title-font-family;
   text-transform: uppercase;
   color: $title-color;
   text-align: center;
-  margin: 0;
 }
 
 .products-list__title {
   margin-bottom: 70px;
   @include font(20px, 23px, 400, 0.04em);
-  font-family: 'Titan One';
+  font-family: $title-font-family;
   font-style: normal;
   text-transform: uppercase;
   color: $products-title-color;
@@ -157,7 +152,7 @@
 }
 
 @include tablet {
-  .products__container {
+  .products__section {
     padding-top: 40px;
   }
   .product__title {
@@ -201,7 +196,7 @@
 }
 
 @include desktop {
-  .products__container {
+  .products__section {
     padding-top: 60px;
     padding-bottom: 60px;
   }
