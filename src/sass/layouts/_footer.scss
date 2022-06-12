@@ -163,21 +163,13 @@
 .footer__tel {
     color: $footer-accent-color;
     text-decoration: none;
-    background:
-            linear-gradient(to top,
-                $footer-accent-color 0%,
-                $footer-icon-color 1px,
-                transparent 2px);
-    background-repeat: repeat-x;
-    background-size: 100%;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
-  &:hover {
-    background:
-        linear-gradient(to top,
-            $footer-accent-color 0%,
-            $footer-icon-color 2px,
-            transparent);
+    transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+       
+  &:hover {       
+    font-size: 18px;
+    text-shadow: 0px 1px 1px $text-color-dark;
 }
     &--text {
         color: $text-color-dark;
