@@ -105,7 +105,7 @@
     background-color: $footer-icon-color;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 @media screen and (min-width:768px) {
         width: 34px;
         height: 34px;
@@ -115,7 +115,8 @@
     &:focus {
         border: 7px solid $footer-accent-color;
         background-color: $footer-accent-color;
-        @include btn-shadow;
+        box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.31);
+
         animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1);
     }
   @keyframes spin {
