@@ -1,1 +1,131 @@
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    
+    z-index: 10;
+    
+}
 
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 8px;
+
+    background-color: transparent;
+
+    @include tablet {
+        padding-top: 32px;
+    }
+
+    @include desktop {
+        padding-top: 40px;
+    }
+}
+    
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo__icon{
+    width: 50px;
+    height: 50px;
+
+    margin-right: 20px;
+}
+
+.logo__title{ 
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $btn-bg-color-dark;
+}
+
+.nav{
+    transition-property: transform, visibility, opacity;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    @media screen and (max-width: 1279px){
+        display: none;
+    }
+}
+
+.nav-list{
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav-list__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.nav-list__link{
+    color: $btn-text-color-light;
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.29;
+    transition-property: color;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+
+    &:hover,
+    &:focus,
+    &--current{
+        color: $btn-accent-bg-color-dark;
+    }
+}
+
+.button-header {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    width: 160px;
+    height: 44px;
+    background: $btn-bg-color-light;
+    color: $btn-text-color-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    border: none;
+    box-shadow: 0 1px 3px #0000001f, 0 1px 1px #00000024, 0 2px 1px #0003;
+    transition-property: background-color,box-shadow;
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    &:hover {
+        background: $btn-accent-bg-color-light;
+    }
+
+    @media screen and (max-width: 767px){
+        display: none;
+    }
+
+    @include tablet{
+        margin-left: 32px;
+    }
+}
+
+.menu-open-btn{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chevron-right-icon {
+    fill: var(--mobile-menu-accent-color);
+    margin-left: 12px;
+}
