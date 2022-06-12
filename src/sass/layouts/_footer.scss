@@ -115,7 +115,7 @@
     &:focus {
         border: 7px solid $footer-accent-color;
         background-color: $footer-accent-color;
-
+        @include btn-shadow;
         animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1);
     }
   @keyframes spin {
@@ -164,11 +164,10 @@
     color: $footer-accent-color;
     text-decoration: none;
    
-    transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
        
   &:hover {       
-    font-size: 18px;
+   
     text-shadow: 0px 1px 1px $text-color-dark;
 }
     &--text {
