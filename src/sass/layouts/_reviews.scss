@@ -29,11 +29,11 @@
     background-image: url('/src/images/reviews/rev-3-dots.svg');
 
     @include tablet {
-      bottom: -8px;
+      bottom: 85px;
     }
 
     @include desktop {
-      bottom: -20px;
+      bottom: 91px;
     }
   }
 }
@@ -53,41 +53,6 @@
   }
 }
 
-// @media screen and (min-width: 321px) {
-//   display: flex;
-//   align-items: center;
-//   width: 100%;
-//   min-height: calc(308px - 13vw);
-// }
-
-// @include mobile {
-//   min-height: 245.72px;
-// }
-
-// @include tablet {
-//   width: 620px;
-//   min-height: 164px;
-//   padding-top: 37px;
-//   padding-right: 55.18px;
-//   padding-left: 50.71px;
-//   padding-bottom: 44px;
-//   margin-bottom: 24px;
-
-//   background-color: rgba(250, 250, 250, 0.4);
-// }
-
-// @include desktop {
-//   width: 1034px;
-//   min-height: 138px;
-//   padding-top: 47px;
-//   padding-right: 142px;
-//   padding-left: 142px;
-//   padding-bottom: 39px;
-//   margin-bottom: 36px;
-
-//   background-color: $customer-background-color;
-// }
-
 .customer-text {
   min-width: 280px;
   max-height: 308px;
@@ -106,96 +71,64 @@
   color: $text-color-dark;
 
   background-color: $customer-background-color;
-  background-image: url('/src/images/reviews/quotes.svg');
-  background-position: 100px;
-  background-repeat: no-repeat;
 
-  @include tablet {
-    font-size: 14px;
-    line-height: 2.16;
-    letter-spacing: 0.04em;
-  }
-
-  @include desktop {
-    font-size: 16px;
-    line-height: 1.86;
-    letter-spacing: 0.04em;
-  }
-
-  &::before {
-    position: absolute;
-    z-index: 0;
-    top: 130px;
-    left: 30px;
-    content: '';
-    width: 54px;
-    height: 40px;
-
-    @include tablet {
-      top: 20px;
-      left: 6px;
-      background-image: url('/src/images/reviews/quotes-tab.svg');
-      width: 60.35px;
-    }
-
-    @include desktop {
-      top: 32px;
-      left: 105px;
-      background-image: url('/src/images/reviews/quotes.svg');
-      width: 54px;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    top: 162px;
-    left: 50%;
-    transform: translateX(-50%);
-    content: '';
-
-    width: 180px;
-    height: 265px;
-
-    background-image: repeating-linear-gradient(
+  background-image: repeating-linear-gradient(
       transparent,
       transparent 30px,
       $customer-accent-color 31px,
       $customer-accent-color 31px
-    );
+    ),
+    url('/src/images/reviews/quotes.svg');
 
-    @include mobile-s {
-      width: calc(100% - 50px);
-      height: 100%;
-      overflow: hidden;
-    }
+  background-size: calc(100% - 100px) 100%, 54px 40px;
+  background-position: 50px 44px, 53px 30px;
+  background-repeat: no-repeat;
 
-    @include tablet {
-      left: -44.71px;
+  @include tablet {
+    width: 620px;
+    padding-top: 37px;
+    padding-right: 55px;
+    padding-left: 51px;
+    padding-bottom: 44px;
+    margin-bottom: 24px;
 
-      width: 608px;
-      height: 90px;
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
 
-      background-image: repeating-linear-gradient(
+    background-image: repeating-linear-gradient(
         transparent,
         transparent 29px,
         $customer-accent-color 30px,
         $customer-accent-color 30px
-      );
-    }
+      ),
+      url('/src/images/reviews/quotes-tab.svg');
+    background-size: calc(100% - 12px) calc(100% - 60px), 60px 40px;
+    background-position: 6px 38px, 6px 20px;
+  }
 
-    @include desktop {
-      left: -36px;
+  @include desktop {
+    width: 1034px;
+    min-height: 138px;
+    padding-top: 47px;
+    padding-right: 142px;
+    padding-left: 142px;
+    padding-bottom: 39px;
+    margin-bottom: 36px;
 
-      width: 821px;
-      min-height: 31px;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
 
-      background-image: repeating-linear-gradient(
+    background-image: repeating-linear-gradient(
         transparent,
-        transparent 30px,
-        $customer-accent-color 31px,
-        $customer-accent-color 31px
-      );
-    }
+        transparent 29px,
+        $customer-accent-color 30px,
+        $customer-accent-color 30px
+      ),
+      url('/src/images/reviews/quotes.svg');
+    background-size: calc(100% - 212px) calc(100% - 60px), 60px 40px;
+    background-position: 106px 46px, 105px 32px;
   }
 }
 
