@@ -1,0 +1,181 @@
+.customer-section {
+  padding-top: 80px;
+  padding-bottom: 48px;
+
+  @include tablet {
+    padding-bottom: 80px;
+  }
+
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.customer-feedback {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    bottom: 69px;
+    transform: translateX(-50%);
+    content: '';
+    width: 32px;
+    height: 4px;
+    background-image: url('/src/images/reviews/rev-3-dots.svg');
+
+    @include tablet {
+      bottom: 85px;
+    }
+
+    @include desktop {
+      bottom: 91px;
+    }
+  }
+}
+
+.customer-photo {
+  display: block;
+  width: 85px;
+  height: 85px;
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+
+.customer-text {
+  min-width: 280px;
+  max-height: 308px;
+
+  padding-top: 43px;
+  padding-right: 58px;
+  padding-left: 65px;
+  padding-bottom: 26px;
+  margin-bottom: 36px;
+
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.58;
+  text-align: center;
+  color: $text-color-dark;
+
+  background-color: $customer-background-color;
+
+  background-image: repeating-linear-gradient(
+      transparent,
+      transparent 30px,
+      $customer-accent-color 31px,
+      $customer-accent-color 31px
+    ),
+    url('/src/images/reviews/quotes.svg');
+
+  background-size: calc(100% - 100px) 100%, 54px 40px;
+  background-position: 50px 44px, 53px 30px;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    width: 620px;
+    padding-top: 37px;
+    padding-right: 55px;
+    padding-left: 51px;
+    padding-bottom: 44px;
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
+
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 29px,
+        $customer-accent-color 30px,
+        $customer-accent-color 30px
+      ),
+      url('/src/images/reviews/quotes-tab.svg');
+    background-size: calc(100% - 12px) calc(100% - 60px), 60px 40px;
+    background-position: 6px 38px, 6px 20px;
+  }
+
+  @include desktop {
+    width: 1034px;
+    min-height: 138px;
+    padding-top: 47px;
+    padding-right: 142px;
+    padding-left: 142px;
+    padding-bottom: 39px;
+    margin-bottom: 36px;
+
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 29px,
+        $customer-accent-color 30px,
+        $customer-accent-color 30px
+      ),
+      url('/src/images/reviews/quotes.svg');
+    background-size: calc(100% - 212px) calc(100% - 60px), 60px 40px;
+    background-position: 106px 46px, 105px 32px;
+  }
+}
+
+.customer-name {
+  height: 25px;
+  margin-bottom: 16px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+  color: $text-color-dark;
+
+  @include tablet {
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+
+  @include desktop {
+    height: 31px;
+
+    font-size: 20px;
+  }
+}
+
+.customer-markers {
+  display: flex;
+  height: 12px;
+  margin-right: -18px;
+  list-style: none;
+}
+
+.marker-house-icon {
+  margin-right: 18px;
+}
+
+.marker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 18px;
+  background-color: $customer-markers-color;
+}
+
+.house-icon {
+  display: block;
+  fill: $customer-icon-color;
+}

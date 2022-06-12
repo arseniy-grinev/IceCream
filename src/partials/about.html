@@ -1,0 +1,74 @@
+<section class="about" id="about">
+  <div class="container about-cont">
+    <p class="about__lable">traditional and love</p>
+    <h2 class="about__title">how it’s made?</h2>
+    <div class="about__how">
+      <picture class="about__cow">
+        <source
+          srcset="
+            ./images/about/cow_pc_1x.png 1x,
+            ./images/about/cow_pc_2x.png 2x
+          "
+          media="(min-width:1200px)"
+        />
+        <source
+          srcset="
+            ./images/about/cow_tab_1x.png 1x,
+            ./images/about/cow_tab_2x.png 2x
+          "
+          media="(min-width:767px)"
+        />
+        <source
+          srcset="
+            ./images/about/cow_mob_1x.png 1x,
+            ./images/about/cow_mob_2x.png 2x
+          "
+          media="(min-width:320px)"
+        />
+
+        <img src="./images/about/cow_mob_1x.png" alt="Cow" />
+      </picture>
+      <div class="about__flex">
+        <p class="about__recipe">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+          justo fringilla.
+        </p>
+        <p class="about__recipe-more">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt.
+        </p>
+        <p class="about__recipe-end">Aliquam erat volutpat. Aenean accumsan.</p>
+        <button type="button" class="button__about" data-modal-open>
+          Read more
+          <svg height="12" width="12" class="button__row">
+            <use href="./images/about/row.svg#icon-row"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="about_backdrop is-hidden" data-modal>
+    <div class="about__modal">
+      <p class="about__mobile-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+        beatae, ea nemo hic nulla deserunt corrupti quo! Minima nihil, eligendi
+        cumque, totam rem, facilis repellendus praesentium necessitatibus
+        doloremque nostrum cupiditate!
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+        beatae, ea nemo hic nulla deserunt corrupti quo! Minima nihil.
+      </p>
+
+      <button type="button" class="about__close" data-modal-close>
+        <svg width="16" height="16">
+          <use href="./images/about/about-close.svg#icon-about-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+<script src="./js/about-modal.js"></script>
