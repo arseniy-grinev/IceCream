@@ -9,11 +9,30 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
         </p>
-        <button class="products-list__btn products-btn" type="button">
-          <svg class="products-btn__icon" width="22" height="14">
-            <use href="/src/images/icons.svg#arrow-right"></use>
-          </svg>
-        </button>
+        <div class="dropdown">
+          <button
+            onclick="myFunctionIcecream()"
+            class="dropbtn products-list__btn products-btn"
+            type="button"
+          >
+            <svg class="products-btn__icon" width="22" height="14">
+              <use href="/src/images/icons.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <div id="myDropdown" class="dropdown-content dropdown-icecream">
+            <h4 class="products-list__title" lang="en">ice cream</h4>
+            <p class="products--secondtext" lang="en">
+              <span class="ingredients">Ingredients:</span> Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et. dolore magna aliqua facilisis.
+            </p>
+            <p class="products--secondtext" lang="en">
+              <span class="recommendations">Recommendations:</span> Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et. dolore magna aliqua facilisis.
+            </p>
+          </div>
+        </div>
       </li>
       <li class="products-list__item">
         <h3 class="products-list__title" lang="en">ice coffee</h3>
@@ -21,11 +40,30 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
         </p>
-        <button class="products-list__btn products-btn" type="button">
-          <svg class="products-btn__icon" width="22" height="14">
-            <use href="/src/images/icons.svg#arrow-right"></use>
-          </svg>
-        </button>
+        <div class="dropdown">
+          <button
+            onclick="myFunctionIcecoffee()"
+            class="dropbtn2 products-list__btn products-btn"
+            type="button"
+          >
+            <svg class="products-btn__icon" width="22" height="14">
+              <use href="/src/images/icons.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <div id="myDropdown2" class="dropdown-content2 dropdown-icecoffee">
+            <h4 class="products-list__title" lang="en">ice coffee</h4>
+            <p class="products--secondtext" lang="en">
+              <span class="ingredients">Ingredients:</span> Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et. dolore magna aliqua facilisis.
+            </p>
+            <p class="products--secondtext" lang="en">
+              <span class="recommendations">Recommendations:</span> Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et. dolore magna aliqua facilisis.
+            </p>
+          </div>
+        </div>
       </li>
       <li class="products-list__item">
         <h3 class="products-list__title" lang="en">milkshakes</h3>
@@ -33,12 +71,43 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
         </p>
-        <button class="products-list__btn products-btn" type="button">
-          <svg class="products-btn__icon" width="22" height="14">
-            <use href="/src/images/icons.svg#arrow-right"></use>
-          </svg>
-        </button>
+        <div class="dropdown">
+          <button
+            onclick="myFunctionMilkshake()"
+            class="dropbtn3 products-list__btn products-btn"
+            type="button"
+          >
+            <svg class="products-btn__icon" width="22" height="14">
+              <use href="/src/images/icons.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <div id="myDropdown3" class="dropdown-content dropdown-milkshake">
+            <h4 class="products-list__title" lang="en">milkshakes</h4>
+            <p class="products--secondtext" lang="en">
+              <span class="ingredients">Ingredients:</span> Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et. dolore magna aliqua facilisis.
+            </p>
+            <p class="products--secondtext" lang="en">
+              <span class="recommendations">Recommendations:</span> Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et. dolore magna aliqua facilisis.
+            </p>
+          </div>
+        </div>
       </li>
     </ul>
   </div>
 </section>
+<script>
+  function myFunctionIcecream() {
+    document.getElementById('myDropdown').classList.toggle('show');
+  }
+  function myFunctionIcecoffee() {
+    document.getElementById('myDropdown2').classList.toggle('show2');
+  }
+
+  function myFunctionMilkshake() {
+    document.getElementById('myDropdown3').classList.toggle('show3');
+  }
+</script>
