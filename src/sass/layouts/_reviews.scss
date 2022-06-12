@@ -179,3 +179,18 @@
   display: block;
   fill: $customer-icon-color;
 }
+
+// ---------SLIDER-----------//
+
+.customer-feedback .swiper-pagination-bullet {
+  background-color: $customer-markers-color;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: $customer-icon-color;
+}
