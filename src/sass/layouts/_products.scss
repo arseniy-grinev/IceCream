@@ -58,7 +58,6 @@
 
 .products-list__item {
   list-style-type: none;
-  border-radius: 24px;
   padding: 140px 40px 40px 40px;
   text-align: center;
   position: relative;
@@ -78,36 +77,36 @@
   background-color: $products-3rd-bg-color;
 }
 .products-list__item:first-child:before {
-  background-image: url(../images/products/products1-mob-1x.jpg);
+  background-image: url(../images/products/products1-mob-1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products/products1-mob-2x.jpg);
+    background-image: url(../images/products/products1-mob-2x.png);
   }
 }
 .products-list__item:nth-child(2):before {
-  background-image: url(../images/products/products2-mob-1x.jpg);
+  background-image: url(../images/products/products2-mob-1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products/products2-mob-2x.jpg);
+    background-image: url(../images/products/products2-mob-2x.png);
   }
 }
 .products-list__item:last-child::before {
-  background-image: url(../images/products/products3-mob-1x.jpg);
+  background-image: url(../images/products/products3-mob-1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products/products3-mob-2x.jpg);
+    background-image: url(../images/products/products3-mob-2x.png);
   }
 }
 .products-list__item:before {
@@ -151,6 +150,11 @@
   @include btn-shadow;
 }
 
+.products-btn:hover .products-btn__icon {
+  transform: rotate(-90deg);
+  scale: 1.2;
+}
+
 @include tablet {
   .products__section {
     padding-top: 40px;
@@ -167,13 +171,13 @@
       padding-top: 118px;
     }
     .products-list__item:first-child:before {
-      background-image: url(../images/products/products1-tab-1x.jpg);
+      background-image: url(../images/products/products1-tab-1x.png);
     }
     .products-list__item:nth-child(2):before {
-      background-image: url(../images/products/products2-tab-1x.jpg);
+      background-image: url(../images/products/products2-tab-1x.png);
     }
     .products-list__item:last-child::before {
-      background-image: url(../images/products/products3-tab-1x.jpg);
+      background-image: url(../images/products/products3-tab-1x.png);
     }
 
     .products-list__item:not(:last-child) {
@@ -214,15 +218,15 @@
       padding: 165px 75px 60px 75px;
     }
     .products-list__item:first-child:before {
-      background-image: url(../images/products/products1-desk-1x.jpg);
+      background-image: url(../images/products/products1-desk-1x.png);
     }
 
     .products-list__item:nth-child(2):before {
-      background-image: url(../images/products/products2-desk-1x.jpg);
+      background-image: url(../images/products/products2-desk-1x.png);
     }
 
     .products-list__item:last-child::before {
-      background-image: url(../images/products/products3-desk-1x.jpg);
+      background-image: url(../images/products/products3-desk-1x.png);
     }
     .products-list__item:before {
       width: 394px;
@@ -230,4 +234,61 @@
       top: -260px;
     }
   }
+}
+.dropdown-content {
+  left: 0;
+  top: 60px;
+  @include tablet {
+    top: 40px;
+  }
+  @include desktop {
+    top: 100px;
+  }
+  display: none;
+  position: absolute;
+  @include card-shadow;
+  min-width: 100%;
+  min-height: 280px;
+  z-index: 1;
+  border-radius: 24px;
+  padding: 30px 15px;
+
+  color: $products-title-color;
+  text-align: center;
+  animation: products-card 500ms ease-out;
+}
+
+.dropdown-icecream {
+  background-color: $products-1st-bg-color;
+}
+.dropdown-icecoffee {
+  background-color: $products-2nd-bg-color;
+}
+.dropdown-milkshake {
+  background-color: $products-3rd-bg-color;
+}
+
+.recommendations,
+.ingredients {
+  @include font(16px, 18px, 700, 0.04em);
+  color: $title-color;
+}
+
+.products--secondtext {
+  @include font(14px, 152%, 400, 0.04em);
+  @include tablet {
+    @include font(14px, 176%, 700, 0.04em);
+  }
+  @include desktop {
+    @include font(16px, 176%, 700, 0.04em);
+  }
+}
+.products--secondtext + .products--secondtext {
+  margin-top: 10px;
+}
+
+.show,
+.show2,
+.show3 {
+  display: block;
 }
