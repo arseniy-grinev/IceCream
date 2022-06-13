@@ -235,11 +235,16 @@
     }
   }
 }
-.dropdown-content,
-.dropdown-content2 {
-  padding: 20px 10px;
+.dropdown-content {
+  // padding: 20px 10px;
   left: 0;
-  top: -5%;
+  top: 60px;
+  @include tablet {
+    top: 40px;
+  }
+  @include desktop {
+    top: 100px;
+  }
   display: none;
   position: absolute;
   @include card-shadow;
@@ -247,8 +252,8 @@
   min-height: 280px;
   z-index: 1;
   border-radius: 24px;
-  padding: 60px 40px;
-  @include font(14px, 152%, 700, 0.04em);
+  padding: 30px 15px;
+
   color: $products-title-color;
   text-align: center;
   animation: products-card 1000ms ease-out;
@@ -266,8 +271,18 @@
 
 .recommendations,
 .ingredients {
-  @include font(20px, 23px, 700, 0.04em);
+  @include font(16px, 18px, 700, 0.04em);
   color: $title-color;
+}
+
+.products--secondtext {
+  @include font(14px, 152%, 400, 0.04em);
+  @include tablet {
+    @include font(14px, 176%, 700, 0.04em);
+  }
+  @include desktop {
+    @include font(16px, 176%, 700, 0.04em);
+  }
 }
 .products--secondtext + .products--secondtext {
   margin-top: 10px;
