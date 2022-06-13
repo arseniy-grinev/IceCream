@@ -1,0 +1,36 @@
+.button-slide {   
+display: inline-block;
+  background-color: rgba(246, 174, 211, 0.8);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: background-color 250ms, 
+    opacity 250ms, visibility 250ms;
+}
+.button-slide.show{
+  opacity: 0.5;
+  visibility: visible;
+}
+.button-slide:hover {   
+   cursor: pointer;   
+   background-color: rgba(235, 88, 164, 0.8); 
+} 
+.button-slide:active {   
+   background-color: rgba(244, 61, 155, 0.8); 
+} 
+.button-slide::after {
+   content: "\f0aa";
+   font-family: FontAwesome;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 2em;
+   line-height: 50px;
+   color: #fff; 
+} 
