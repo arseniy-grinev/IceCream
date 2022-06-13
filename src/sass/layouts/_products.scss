@@ -77,36 +77,36 @@
   background-color: $products-3rd-bg-color;
 }
 .products-list__item:first-child:before {
-  background-image: url(../images/products/products1-mob-1x.jpg);
+  background-image: url(../images/products/products1-mob-1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products/products1-mob-2x.jpg);
+    background-image: url(../images/products/products1-mob-2x.png);
   }
 }
 .products-list__item:nth-child(2):before {
-  background-image: url(../images/products/products2-mob-1x.jpg);
+  background-image: url(../images/products/products2-mob-1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products/products2-mob-2x.jpg);
+    background-image: url(../images/products/products2-mob-2x.png);
   }
 }
 .products-list__item:last-child::before {
-  background-image: url(../images/products/products3-mob-1x.jpg);
+  background-image: url(../images/products/products3-mob-1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products/products3-mob-2x.jpg);
+    background-image: url(../images/products/products3-mob-2x.png);
   }
 }
 .products-list__item:before {
@@ -171,13 +171,13 @@
       padding-top: 118px;
     }
     .products-list__item:first-child:before {
-      background-image: url(../images/products/products1-tab-1x.jpg);
+      background-image: url(../images/products/products1-tab-1x.png);
     }
     .products-list__item:nth-child(2):before {
-      background-image: url(../images/products/products2-tab-1x.jpg);
+      background-image: url(../images/products/products2-tab-1x.png);
     }
     .products-list__item:last-child::before {
-      background-image: url(../images/products/products3-tab-1x.jpg);
+      background-image: url(../images/products/products3-tab-1x.png);
     }
 
     .products-list__item:not(:last-child) {
@@ -218,15 +218,15 @@
       padding: 165px 75px 60px 75px;
     }
     .products-list__item:first-child:before {
-      background-image: url(../images/products/products1-desk-1x.jpg);
+      background-image: url(../images/products/products1-desk-1x.png);
     }
 
     .products-list__item:nth-child(2):before {
-      background-image: url(../images/products/products2-desk-1x.jpg);
+      background-image: url(../images/products/products2-desk-1x.png);
     }
 
     .products-list__item:last-child::before {
-      background-image: url(../images/products/products3-desk-1x.jpg);
+      background-image: url(../images/products/products3-desk-1x.png);
     }
     .products-list__item:before {
       width: 394px;
@@ -236,7 +236,6 @@
   }
 }
 .dropdown-content {
-  // padding: 20px 10px;
   left: 0;
   top: 60px;
   @include tablet {
@@ -256,7 +255,7 @@
 
   color: $products-title-color;
   text-align: center;
-  animation: products-card 1000ms ease-out;
+  animation: products-card 500ms ease-out;
 }
 
 .dropdown-icecream {
