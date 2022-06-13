@@ -1,5 +1,5 @@
 .contacts-section {
-  padding-bottom: 24px;
+  padding-bottom: 48px;
   background-image: linear-gradient(
     to bottom,
     $products-title-color 23%,
@@ -8,7 +8,7 @@
   );
 
   @media screen and (min-width: 768px) {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     background-image: linear-gradient(
       to bottom,
       $products-title-color 20%,
@@ -18,7 +18,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    padding-bottom: 60px;
+    padding-bottom: 120px;
     background-image: linear-gradient(
       to bottom,
       $products-title-color 13%,
@@ -61,7 +61,7 @@
 .contacts__list:hover,
 .contacts__list:focus {
   transform: scale(1.015);
-  box-shadow: 0 10px 20px rgba(159,61,86,.6);
+  box-shadow: 0 10px 20px rgba(159, 61, 86, 0.6);
 }
 
 .contacts__list-city {
@@ -277,9 +277,9 @@
   background-color: $btn-accent-bg-color-dark;
   color: $btn-text-color-light;
   fill: $btn-text-color-light;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%), 0 2px 1px rgb(0 0 0 / 20%);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%),
+    0 2px 1px rgb(0 0 0 / 20%);
 }
-
 
 .contacts__button-franch {
   display: flex;
@@ -317,9 +317,9 @@
   background-color: $btn-accent-bg-color-light;
   color: $btn-text-color-dark;
   fill: $btn-text-color-dark;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%), 0 2px 1px rgb(0 0 0 / 20%);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%),
+    0 2px 1px rgb(0 0 0 / 20%);
 }
-
 
 // ------------------------ modal -------------------
 
@@ -332,6 +332,7 @@
   transition: opacity 250ms, visibility 250ms;
   display: flex;
   align-items: center;
+  z-index: 99;
 }
 
 .is-hidden {
@@ -346,6 +347,7 @@
 
 .modal-contacts {
   width: 310px;
+  height: auto;
   background-color: #fff5f6;
   border-radius: 10px;
   position: absolute;
@@ -353,7 +355,6 @@
   left: 50%;
   transition: transform 250ms;
   transform: translate(-50%, -50%) scale(1) rotateY(0);
-  
   @media screen and (min-width: 480px) {
     width: 440px;
   }
@@ -365,12 +366,11 @@
   @media screen and (min-width: 1280px) {
     width: 528px;
   }
-
 }
 
 .modal-contacts__close-btn {
   fill: $btn-bg-color-dark;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   border: none;
 
   display: flex;
@@ -391,6 +391,8 @@
   &:hover,
   &:focus {
     fill: $btn-accent-bg-color-dark;
+    border: 1px solid #c7133e;
+    border-radius: 50%;
   }
 }
 
@@ -412,6 +414,22 @@
 
   @media screen and (min-width: 1280px) {
     @include font(16px, 1.86, 500, 0.04em);
+  }
+}
 
+.contacts__maps {
+  width: 310px;
+  height: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 440px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 488px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 528px;
   }
 }
