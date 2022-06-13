@@ -124,6 +124,7 @@
   }
 
   &__article {
+    position: relative;
     z-index: 1;
     justify-content: end;
     margin-top: 61px;
@@ -135,7 +136,7 @@
     }
 
     @include desktop {
-      margin-top: 108px;
+      margin-top: 85px;
     }
   }
 
@@ -151,23 +152,37 @@
     }
   }
 
-  &__article-link {
+  &__article-title-sub {
+    font-size: 8px;
+    line-height: 1.5;
+    max-width: 114px;
+
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.43;
+      max-width: 200px;
+    }
+  }
+
+  &__article-btn {
     width: 18px;
     height: 18px;
     background-color: $btn-bg-color-light;
     border-radius: 50%;
+    border: none;
     justify-content: center;
     align-items: center;
     margin-top: 7px;
     display: flex;
     fill: $btn-bg-color-dark;
 
-    transition-property: background-color, box-shadow, fill;
+    transition-property: background-color, box-shadow, rotate, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
+      transform: rotate(90deg);
       background-color: $btn-accent-bg-color-light;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
