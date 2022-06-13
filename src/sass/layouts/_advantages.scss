@@ -2,6 +2,12 @@
   padding-top: 20px;
   padding-bottom: 40px;
   background-color: $advantages-bg-color;
+  @include tablet {
+    padding-bottom: 80px;
+  }
+  @include desktop {
+    padding-bottom: 120px;
+  }
 }
 
 .advantage-list {
