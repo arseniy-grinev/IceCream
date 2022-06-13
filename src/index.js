@@ -6,4 +6,3 @@ import './js/menu';
 import './js/modal';
 import './js/modal-contacts';
 import './js/hero-overlay';
-import './js/buttun-slide';
