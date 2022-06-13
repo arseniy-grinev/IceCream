@@ -127,7 +127,7 @@
     position: relative;
     z-index: 1;
     justify-content: end;
-    margin-top: 61px;
+    margin-top: 51px;
     margin-left: auto;
     color: $text-color-light;
 
@@ -136,7 +136,7 @@
     }
 
     @include desktop {
-      margin-top: 85px;
+      margin-top: 75px;
     }
   }
 
@@ -164,6 +164,10 @@
     }
   }
 
+  &__article-title-grey {
+    font-weight: 700;
+  }
+
   &__article-btn {
     width: 18px;
     height: 18px;
@@ -176,16 +180,20 @@
     display: flex;
     fill: $btn-bg-color-dark;
 
-    transition-property: background-color, box-shadow, rotate, fill;
+    transition-property: background-color, box-shadow, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
-      transform: rotate(90deg);
       background-color: $btn-accent-bg-color-light;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    &:hover,
+    &:focus &__read-more {
+      transform: rotate(90deg);
+      scale: 1.2;
     }
 
     @include desktop {
@@ -194,6 +202,17 @@
       margin-top: 20px;
     }
   }
+
+  // &__read-more {
+  //   transition-property: rotate;
+  //   transition-duration: 250ms;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  //   &:hover,
+  //   &:focus {
+  //     transform: rotate(90deg);
+  //   }
+  // }
 
   &__read-more {
     width: 10px;
