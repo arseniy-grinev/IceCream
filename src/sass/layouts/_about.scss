@@ -89,6 +89,7 @@
 
 .about__flex {
   font-family: 'DM Sans', sans-serif;
+  position: relative;
 
   @include font(12px, 1.6, 500, null);
   @media screen and (max-width: 767px) {
@@ -156,10 +157,12 @@
   @include tablet {
     font-size: 16px;
   }
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     background: $btn-accent-bg-color-light;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -169,4 +172,33 @@
 
 .about__mobile-text {
   margin-bottom: 10px;
+}
+
+.about__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: #ffa5ba;
+
+  display: flex;
+  align-items: flex-start;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border-radius: 2%;
+  box-shadow: 7px 6px 4px 0px rgba(153, 108, 108, 0.43);
+
+  &.is-hidden {
+    transform: translateY(100%);
+  }
+}
+
+.about__read {
+  @include font(14px, 1.5, 700, null);
+  color: $text-accent-color;
 }
