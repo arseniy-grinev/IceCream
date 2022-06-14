@@ -76,36 +76,36 @@
   background-color: $products-3rd-bg-color;
 }
 .products-list__item:first-child:before {
-  background-image: url(../images/products/products1-mob-1x.png);
+  background-image: url(../images/products/products1-mob-1x.webp);
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products/products1-mob-2x.png);
+    background-image: url(../images/products/products1-mob-2x.webp);
   }
 }
 .products-list__item:nth-child(2):before {
-  background-image: url(../images/products/products2-mob-1x.png);
+  background-image: url(../images/products/products2-mob-1x.webp);
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products/products2-mob-2x.png);
+    background-image: url(../images/products/products2-mob-2x.webp);
   }
 }
 .products-list__item:last-child::before {
-  background-image: url(../images/products/products3-mob-1x.png);
+  background-image: url(../images/products/products3-mob-1x.webp);
   background-repeat: no-repeat;
   background-size: contain;
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products/products3-mob-2x.png);
+    background-image: url(../images/products/products3-mob-2x.webp);
   }
 }
 .products-list__item:before {
@@ -119,6 +119,7 @@
 }
 .products-list__item:hover {
   @include card-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: scale(1.005);
   transition-duration: 250ms;
 }
@@ -171,13 +172,31 @@
       padding-top: 118px;
     }
     .products-list__item:first-child:before {
-      background-image: url(../images/products/products1-tab-1x.png);
+      background-image: url(../images/products/products1-tab-1x.webp);
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/products/products1-tab-2x.webp);
+      }
     }
     .products-list__item:nth-child(2):before {
-      background-image: url(../images/products/products2-tab-1x.png);
+      background-image: url(../images/products/products2-tab-1x.webp);
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/products/products2-tab-2x.webp);
+      }
     }
     .products-list__item:last-child::before {
-      background-image: url(../images/products/products3-tab-1x.png);
+      background-image: url(../images/products/products3-tab-1x.webp);
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/products/products3-tab-2x.webp);
+      }
     }
 
     .products-list__item:not(:last-child) {
@@ -218,15 +237,33 @@
       padding: 165px 75px 60px 75px;
     }
     .products-list__item:first-child:before {
-      background-image: url(../images/products/products1-desk-1x.png);
+      background-image: url(../images/products/products1-desk-1x.webp);
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/products/products1-desk-2x.webp);
+      }
     }
 
     .products-list__item:nth-child(2):before {
-      background-image: url(../images/products/products2-desk-1x.png);
+      background-image: url(../images/products/products2-desk-1x.webp);
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/products/products2-desk-2x.webp);
+      }
     }
 
     .products-list__item:last-child::before {
-      background-image: url(../images/products/products3-desk-1x.png);
+      background-image: url(../images/products/products3-desk-1x.webp);
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/products/products3-desk-2x.webp);
+      }
     }
     .products-list__item:before {
       width: 394px;
@@ -255,7 +292,7 @@
 
   color: $products-title-color;
   text-align: center;
-  animation: products-card 500ms ease-in;
+  animation: products-card 300ms ease-in;
 }
 
 .dropdown-icecream {
