@@ -3,7 +3,7 @@
     openMenuBtn: document.querySelector(".menu-open-btn"),
     closeMenuBtn: document.querySelector(".menu-close-btn"),
     closeMenulinks: document.querySelectorAll(".js-mob-menu-list__item"),
-    menu: document.querySelector(".mobile-menu"),
+    menu: document.querySelector(".backdrop"),
     body: document.querySelector("body"),
   };
 
