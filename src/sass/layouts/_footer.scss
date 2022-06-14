@@ -144,6 +144,7 @@
     }
 }
 
+<<<<<<< Updated upstream
 
 .footer__tel {
          color: $text-color-dark;
@@ -175,8 +176,42 @@
             }
         
         
+=======
+.footer__tel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.86;
+
+    color: $text-color-dark;
+
+    @media screen and (min-width:768px) {
+                font-size: 14px;
+            }
+        
+    @media screen and (min-width:1280px) {
+                font-size: 16px;
+                letter-spacing: 0.02em;
+            }
+    &--link{
+     color: $footer-accent-color;
+     text-decoration: none;
+
+    transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+
+        text-shadow: 0px 1px 1px $text-color-dark;
+    }
+>>>>>>> Stashed changes
     }
 }
+
+
+  
+  
 
 .footer__element::before {
     position: absolute;
