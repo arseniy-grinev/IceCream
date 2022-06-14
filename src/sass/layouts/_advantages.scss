@@ -4,6 +4,7 @@
   background-color: $advantages-bg-color;
   @include tablet {
     padding-bottom: 80px;
+    padding-top: 80px;
   }
   @include desktop {
     padding-bottom: 120px;
@@ -14,7 +15,8 @@
   margin-top: -32px;
   @include tablet {
     display: flex;
-    margin-left: -20px;
+    margin-left: -22px;
+    margin-top: 0;
   }
   @include desktop {
     margin-left: -140px;
@@ -26,8 +28,9 @@
   max-width: 230px;
   margin-top: 98px;
   @include tablet {
-    margin-left: 20px;
+    margin-left: 22px;
     max-width: 165px;
+    margin-top: 0;
   }
   @include desktop {
     margin-left: 140px;
@@ -42,6 +45,7 @@
   @include tablet {
     @include font(16px, 1.76, null, 0.02);
   }
+  width: 100%;
   &-top {
     @include font(36px, 1.14, 400, 0.04em);
     font-family: $title-font-family;
@@ -72,10 +76,7 @@
   bottom: 56px;
   background-image: url(../images/advantages/advantage-1.svg);
   @include tablet {
-    bottom: 105px;
-  }
-  @include desktop {
-    bottom: 121px;
+    bottom: 106px;
   }
 }
 .advantage-2::before {
@@ -89,10 +90,7 @@
   background-image: url(../images/advantages/advantage-2.svg);
   //   fill: black;
   @include tablet {
-    bottom: 105px;
-  }
-  @include desktop {
-    bottom: 121px;
+    bottom: 106px;
   }
 }
 .advantage-3::before {
@@ -105,9 +103,6 @@
   bottom: 56px;
   background-image: url(../images/advantages/advantage-3.svg);
   @include tablet {
-    bottom: 105px;
-  }
-  @include desktop {
-    bottom: 121px;
+    bottom: 106px;
   }
 }
