@@ -88,7 +88,6 @@
 }
 
 .about__flex {
-  font-family: 'DM Sans', sans-serif;
   position: relative;
 
   @include font(12px, 1.6, 500, null);
@@ -157,7 +156,8 @@
   @include tablet {
     font-size: 16px;
   }
-  transition: background, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     background: $btn-accent-bg-color-light;
