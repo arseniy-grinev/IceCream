@@ -71,10 +71,6 @@
     transform: translateX(0%);
     transition: all 500ms ease-out;
 
-    &.is-hidden {
-        transform: translateX(100%);
-    }
-
     .container {
         display: flex;
         flex-direction: column;
@@ -92,6 +88,12 @@
     @include desktop {
         display: none;
     }
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 
 .mob-menu-list__item {
@@ -119,8 +121,12 @@
     font-size: 14px;
     line-height: 1.28;
     color: $mobile-menu-text-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &.current {
+        color: $mobile-menu-accent-color;
+    }
+    &:hover {
         color: $mobile-menu-accent-color;
     }
 }

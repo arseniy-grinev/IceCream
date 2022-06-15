@@ -7,8 +7,12 @@
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms, visibility 250ms;
     z-index: 12;
+    transition: opacity 450ms, visibility 450ms;
+
+    &.is-hidden .mobile-menu {
+        transform: translateX(100%);
+    }
 }
 
 .buy-modal {
