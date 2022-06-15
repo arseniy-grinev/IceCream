@@ -59,6 +59,9 @@ const onKeyPress = e => {
             setPreviousIndex();
              showImageByIndex();
             break;
+        case 27:
+            hideModal();
+            break;
         default:
             return;
     }
